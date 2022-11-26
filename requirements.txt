@@ -1,0 +1,1 @@
+dito natin ili-list yung mga kailangang packages and kung may minimum version
