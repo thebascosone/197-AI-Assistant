@@ -1,1 +1,5 @@
-dito natin ili-list yung mga kailangang packages and kung may minimum version
+#Required Packages
+numpy
+torch
+torchaudio
+transformers
