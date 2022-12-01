@@ -2,11 +2,16 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-checkpoint = "facebook/blenderbot-400M-distill"
-tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+def GenerateReply(human_input):
+  checkpoint = "facebook/blenderbot-400M-distill"
+  tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+  model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 
-txt_input = input("Human: ") #should be a string coming from the ASR
-inputs = tokenizer([txt_input], padding=True, return_tensors='pt')
-replies = model.generate(**inputs)
-print("Bot: ", tokenizer.batch_decode(replies, skip_special_tokens=True)[0]) #instead of print, pass output to STT block as string
+  model_inputs = tokenizer(human_input, padding=True, return_tensors='pt')
+  model_replies = model.generate(**model_inputs)
+  return tokenizer.batch_decode(model_replies, skip_special_tokens=True)[0]
+
+while (1):
+  txt_input = input("Human: ") #should be a string coming from the ASR block
+  reply = GenerateReply([txt_input])
+  print("Bot: ", reply) #instead of print, pass output to STT block
