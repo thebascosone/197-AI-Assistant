@@ -1,5 +1,7 @@
 # 197-AI-Assistant
-Repository for CoE 197 Assignment 2 Group 3
+CoE 197 Assignment 2 Group 3
+ - Bryan Bascos
+ - 
 
 
 ### The AI Assistant would be comprised of 4 blocks: 
@@ -15,7 +17,7 @@ Repository for CoE 197 Assignment 2 Group 3
 
 ### Command stuff:
 ```
-git clone 197-AI-Assistant
+git clone https://github.com/thebascosone/197-AI-Assistant.git
 cd 197-AI-Assistant
 pip3 install -r requirements.txt
 python3 assistant.py
