@@ -30,3 +30,9 @@ cd 197-AI-Assistant
 pip3 install -r requirements.txt
 python3 assistant.py
 ```
+
+### Common Error and Fix:
+- There's a chance that the *pyttsx3* package encounters a "No system module" error.
+- In that case, open your File Explorer and search %AppData%.
+- Go to ~\Python\Python38\site-packages\pywin32_system32 and copy the two files there.
+- Paste them here: ~\Python\Python38\site-packages\win32\lib.
