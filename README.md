@@ -25,7 +25,7 @@ CoE 197 Assignment 2 Group 3
 ### Command line:
 ```
 setx OPENAI_API_KEY “<yourkey>”
-git clone https://github.com/thebascosone/197-AI-Assistant.git
+git clone https://github.com/thebascosone/197-AI-Assistant
 cd 197-AI-Assistant
 pip3 install -r requirements.txt
 python3 assistant.py
