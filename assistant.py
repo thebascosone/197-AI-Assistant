@@ -96,8 +96,6 @@ print("FLeWm Assistant is online!")
 
 
 while (1):
-    print(">Awaiting input...")
-
     # get input
     audio_chunk = stream.read(num_samples)
     audio_int16 = np.frombuffer(audio_chunk, np.int16)
@@ -119,7 +117,8 @@ while (1):
         human_input_txt = ASR_Transcribe(ASR_Tokenizer, ASR_Model)
         print(">Human: ", human_input_txt)
         bot_reply = GenerateReply(human_input_txt)
-        print(">FLeWm: ", bot_reply[1:])
+        print(">FLeWm: ", bot_reply[2:])
         TTS(engine, bot_reply)
 
         new_confidence = 0
+        print(">Awaiting input...")
