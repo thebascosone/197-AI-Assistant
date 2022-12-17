@@ -17,8 +17,6 @@ VAD_Model, utils = torch.hub.load(repo_or_dir='snakers4/silero-vad',
  _, read_audio,
  *_) = utils
 
-
-
 # initialize ASR block
 ASR_Checkpoint = "openai/whisper-tiny.en"
 ASR_Tokenizer = WhisperProcessor.from_pretrained(ASR_Checkpoint)
@@ -29,7 +27,6 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # initialize TTS block
 engine = pyttsx3.init()
-#pag may error dito, lipat yung pywintypes38.dll sa AppData\Roaming\Python\Python38\site-packages\win32\lib
 
 def int2float(sound):
     abs_max = np.abs(sound).max()
@@ -95,7 +92,7 @@ Listener.start()
 cooldown = 0
 count = 0
 message_length = 0
-print("Assistant is online!")
+print("FLeWm Assistant is online!")
 
 
 while (1):
@@ -122,7 +119,7 @@ while (1):
         human_input_txt = ASR_Transcribe(ASR_Tokenizer, ASR_Model)
         print(">Human: ", human_input_txt)
         bot_reply = GenerateReply(human_input_txt)
-        print(">Bot Assistant: ", bot_reply[1:])
+        print(">FLeWm: ", bot_reply[1:])
         TTS(engine, bot_reply)
 
         new_confidence = 0
