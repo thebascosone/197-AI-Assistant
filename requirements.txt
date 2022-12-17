@@ -1,6 +1,8 @@
-#Required Packages
+# Required Packages
 numpy
 torch
 torchaudio
-transformers
-sounddevice
+transformers #huggingface, for ASR block
+sounddevice #for recording and playing sound
+openai #for LLM block
+pyttsx3 #for TTS block
