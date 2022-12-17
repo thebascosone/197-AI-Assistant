@@ -1,1 +1,9 @@
-dito natin ili-list yung mga kailangang packages and kung may minimum version
+# Required Packages
+numpy==1.21.6
+torch==1.12.1
+torchaudio==0.12.1
+transformers==4.24.0
+sounddevice==0.4.5
+openai==0.25.0
+pyttsx3==2.90
+PyAudio==0.2.12
