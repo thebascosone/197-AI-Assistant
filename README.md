@@ -3,7 +3,7 @@ CoE 197 Assignment 2 Group 3
  - Bryan Bascos
  - Adrian Dumosmog
  - John Emmanuel Santos
- - @Mr.Leeds
+ - Russell Broqueza
 
 
 ### The AI Assistant is comprised of 4 blocks: 
